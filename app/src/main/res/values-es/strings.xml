@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_machine_title">Añadir máquina</string>
+    <string name="ip_hint">IP (0.0.0.0)</string>
+    <string name="name_hint">Nombre</string>
+    <string name="empty_ip_error">Debes proporcionar una IP</string>
+    <string name="delete_machine_msg">Borrar máquina</string>
+    <string name="ip_exists_error">Esa IP ya existe</string>
+</resources>

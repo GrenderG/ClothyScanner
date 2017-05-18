@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">ClothyScanner</string>
+    <string name="add_machine_title">Add a machine</string>
+    <string name="ip_hint">IP (0.0.0.0)</string>
+    <string name="name_hint">Name</string>
+    <string name="empty_ip_error">You must provide an IP</string>
+    <string name="delete_machine_msg">Delete machine</string>
+    <string name="ip_exists_error">That IP already exists</string>
+</resources>
