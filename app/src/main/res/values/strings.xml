@@ -6,4 +6,6 @@
     <string name="empty_ip_error">You must provide an IP</string>
     <string name="delete_machine_msg">Delete machine</string>
     <string name="ip_exists_error">That IP already exists</string>
+    <string name="data_received_msg">Data received</string>
+    <string name="error_msg">Something went wrong</string>
 </resources>

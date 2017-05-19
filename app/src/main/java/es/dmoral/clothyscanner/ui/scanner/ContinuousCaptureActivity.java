@@ -112,7 +112,7 @@ public class ContinuousCaptureActivity extends AppCompatActivity implements UdpC
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toasty.success(ContinuousCaptureActivity.this, "Data received").show();
+                Toasty.success(ContinuousCaptureActivity.this, getString(R.string.data_received_msg)).show();
             }
         });
     }
@@ -122,7 +122,7 @@ public class ContinuousCaptureActivity extends AppCompatActivity implements UdpC
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toasty.error(ContinuousCaptureActivity.this, "Something went wrong").show();
+                Toasty.error(ContinuousCaptureActivity.this, getString(R.string.error_msg)).show();
             }
         });
     }

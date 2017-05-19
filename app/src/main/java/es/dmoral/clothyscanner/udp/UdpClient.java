@@ -41,7 +41,8 @@ public class UdpClient {
                 try {
                     // Sending
                     datagramSocket = new DatagramSocket();
-                    DatagramPacket datagramPacket = new DatagramPacket(message.getBytes(), message.length(), InetAddress.getByName(ip), PORT);
+                    DatagramPacket datagramPacket = new DatagramPacket(message.getBytes(),
+                            message.length(), InetAddress.getByName(ip), PORT);
                     datagramSocket.setBroadcast(true);
                     datagramSocket.send(datagramPacket);
 
