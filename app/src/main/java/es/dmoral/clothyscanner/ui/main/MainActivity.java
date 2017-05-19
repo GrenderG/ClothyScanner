@@ -32,6 +32,23 @@ import es.dmoral.clothyscanner.data.model.Machine;
 import es.dmoral.clothyscanner.ui.scanner.ContinuousCaptureActivity;
 import es.dmoral.toasty.Toasty;
 
+/**
+ * This file is part of ClothyScanner.
+ *
+ * ClothyScanner is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ClothyScanner is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with ClothyScanner.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 public class MainActivity extends AppCompatActivity implements MachineAdapter.OnMachineClickListener,
         MachineAdapter.OnMachineLongClickListener {
     @BindView(R.id.toolbar) Toolbar toolbar;
@@ -42,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements MachineAdapter.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setupViews();
