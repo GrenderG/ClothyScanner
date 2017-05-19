@@ -22,7 +22,7 @@ import java.net.InetAddress;
  */
 
 public class UdpClient {
-    private static final int HOST = 5042;
+    private static final int PORT = 5042;
 
     private UdpCallback udpCallback;
     private String ip;
@@ -41,7 +41,7 @@ public class UdpClient {
                 try {
                     // Sending
                     datagramSocket = new DatagramSocket();
-                    DatagramPacket datagramPacket = new DatagramPacket(message.getBytes(), message.length(), InetAddress.getByName(ip), HOST);
+                    DatagramPacket datagramPacket = new DatagramPacket(message.getBytes(), message.length(), InetAddress.getByName(ip), PORT);
                     datagramSocket.setBroadcast(true);
                     datagramSocket.send(datagramPacket);
 
