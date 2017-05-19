@@ -31,12 +31,12 @@ public class ClothyScannerDBHelper extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
     private static ClothyScannerDBHelper clothyScannerDBHelper;
 
-    public ClothyScannerDBHelper(Context context) {
-        super(context, DB_NAME, null, DB_VERSION);
-    }
-
     static {
         cupboard().register(Machine.class);
+    }
+
+    public ClothyScannerDBHelper(Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
     }
 
     public static ClothyScannerDBHelper getClothyScannerDBHelper(Context context) {

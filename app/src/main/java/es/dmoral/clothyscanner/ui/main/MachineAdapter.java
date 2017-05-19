@@ -43,14 +43,6 @@ public class MachineAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private OnMachineClickListener onMachineClickListener;
     private OnMachineLongClickListener onMachineLongClickListener;
 
-    public interface OnMachineClickListener {
-        void onMachineClick(Machine machine);
-    }
-
-    public interface OnMachineLongClickListener {
-        void onMachineLongClick(Machine machine);
-    }
-
     public MachineAdapter(ArrayList<Machine> machines, OnMachineClickListener onMachineClickListener,
                           OnMachineLongClickListener onMachineLongClickListener) {
         this.machines = machines;
@@ -68,7 +60,7 @@ public class MachineAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ((MachineViewHolder) holder).machineImage.setImageDrawable(TextDrawable.builder()
                 .buildRound(String.valueOf(machines.get(position).getFriendlyName().charAt(0)).toUpperCase(),
-                    ColorGenerator.MATERIAL.getColor(machines.get(position).getFriendlyName())));
+                        ColorGenerator.MATERIAL.getColor(machines.get(position).getFriendlyName())));
         ((MachineViewHolder) holder).machineName.setText(machines.get(position).getFriendlyName());
         ((MachineViewHolder) holder).machineIp.setText(machines.get(position).getIp());
     }
@@ -91,6 +83,14 @@ public class MachineAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     public boolean alreadyAdded(Machine machine) {
         return machines.contains(machine);
+    }
+
+    public interface OnMachineClickListener {
+        void onMachineClick(Machine machine);
+    }
+
+    public interface OnMachineLongClickListener {
+        void onMachineLongClick(Machine machine);
     }
 
     class MachineViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,

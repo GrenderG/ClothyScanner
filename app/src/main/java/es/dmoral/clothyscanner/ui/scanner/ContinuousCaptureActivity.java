@@ -1,15 +1,12 @@
 package es.dmoral.clothyscanner.ui.scanner;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.os.Build;
+import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.KeyEvent;
 
 import com.google.zxing.ResultPoint;
-import com.google.zxing.client.android.BeepManager;
 import com.journeyapps.barcodescanner.BarcodeCallback;
 import com.journeyapps.barcodescanner.BarcodeResult;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
@@ -40,13 +37,11 @@ import es.dmoral.toasty.Toasty;
  */
 
 public class ContinuousCaptureActivity extends AppCompatActivity implements UdpClient.UdpCallback {
+    public static final String IP_ARG = "IP_ARG";
     @BindView(R.id.capture_view) DecoratedBarcodeView captureView;
-
     private Vibrator vibrator;
     private String ip;
     private UdpClient udpClient;
-
-    public static final String IP_ARG = "IP_ARG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

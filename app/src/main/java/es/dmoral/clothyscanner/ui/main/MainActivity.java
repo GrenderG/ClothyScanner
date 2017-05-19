@@ -12,16 +12,12 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.google.zxing.integration.android.IntentIntegrator;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,7 +26,6 @@ import es.dmoral.clothyscanner.data.access.DBAccessor;
 import es.dmoral.clothyscanner.data.db.ClothyScannerDBHelper;
 import es.dmoral.clothyscanner.data.model.Machine;
 import es.dmoral.clothyscanner.ui.scanner.ContinuousCaptureActivity;
-import es.dmoral.toasty.Toasty;
 
 /**
  * This file is part of ClothyScanner.

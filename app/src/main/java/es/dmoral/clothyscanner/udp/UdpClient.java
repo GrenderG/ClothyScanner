@@ -3,8 +3,6 @@ package es.dmoral.clothyscanner.udp;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.SocketException;
-import java.net.UnknownHostException;
 
 /**
  * This file is part of ClothyScanner.
@@ -29,11 +27,6 @@ public class UdpClient {
     private UdpCallback udpCallback;
     private String ip;
 
-    public interface UdpCallback {
-        void onSuccess();
-        void onError();
-    }
-
     public UdpClient(UdpCallback udpCallback, String ip) {
         this.udpCallback = udpCallback;
         this.ip = ip;
@@ -42,6 +35,7 @@ public class UdpClient {
     public void sendMessage(final String message) {
         new Thread(new Runnable() {
             DatagramSocket datagramSocket = null;
+
             @Override
             public void run() {
                 try {
@@ -70,5 +64,11 @@ public class UdpClient {
                 }
             }
         }).start();
+    }
+
+    public interface UdpCallback {
+        void onSuccess();
+
+        void onError();
     }
 }
